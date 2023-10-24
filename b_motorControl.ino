@@ -1,3 +1,5 @@
+// Control the motor direction and speed
+
 void motorControl() {
 
   // Print to Serial Monitor
