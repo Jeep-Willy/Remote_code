@@ -8,9 +8,10 @@ void setup()
     Serial.println("init failed");
   
   // Set initial motor direction as forward
-  motorcontrol[2] = 0;
+  motorcontrol[1] = 0;
 
-  motorcontrol[3] = 0;
+  // Set initial Servo to neutral 
+  servocontrol[1] = 90;
  
 }
  
@@ -19,5 +20,6 @@ void loop()
 
 motorControl();
 servoControl();
+transmitData();
 
 }
