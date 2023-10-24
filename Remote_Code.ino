@@ -1,10 +1,4 @@
-// Forces RadioHead library to use Timer 2, avoiding interrupt vector conflict
-// #define RH_ASK_ARDUINO_USE_TIMER2
-
-
-// Include Servo Library
-// #include <Servo.h>
-#include <PWMServo.h>
+// Info to come
 
 // Include RadioHead ReliableDatagram & NRF24 Libraries
 #include <RHReliableDatagram.h>
@@ -12,9 +6,6 @@
  
 // Include dependant SPI Library 
 #include <SPI.h>
-
-// Create Servo Object
-PWMServo myServo;
  
 // Define Joystick Connections
 #define joyVert    A0 
@@ -36,11 +27,7 @@ RHReliableDatagram RadioManager(RadioDriver, CLIENT_ADDRESS);
  
 // Declare unsigned 8-bit motorcontrol array
 // 2 Bytes for motor speeds plus 1 byte for direction control
-uint8_t motorcontrol[2]; 
-
-// Declare unsigned 8-bit rotorcontrol array
-// 2 Bytes for motor speeds plus 1 byte for direction control
-uint8_t servocontrol[2]; 
+uint8_t motorcontrol[4]; 
  
 // Define the Message Buffer
 uint8_t buf[RH_NRF24_MAX_MESSAGE_LEN];
