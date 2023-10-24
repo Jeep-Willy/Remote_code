@@ -1,5 +1,6 @@
-void servoControl() {
+// Control the servo direction and speed
 
+void servoControl() {
 
   // Read the Joystick X position
   joyposHorz = analogRead(joyHorz);
@@ -11,41 +12,34 @@ void servoControl() {
 
   if (joyposHorz < 460) {
 
-    servocontrol[1] = 1;
+    motorcontrol[3] = 1;
 
     //Determine Servo Speed
-    servocontrol[0] = map(joyposHorz, 460, 1023, 90, 180);
+    motorcontrol[2] = map(joyposHorz, 460, 1023, 90, 180);
 
-    myServo.write(servocontrol[0]);
+    // myServo.write(motorcontrol[2]);
 
-    // Serial.print("Joystick values: ");
-    // Serial.print(joyposHorz);
-    // Serial.print(" Converted values: ");
-    // Serial.println(servocontrol[0]);
   }
   else if (joyposHorz > 564) 
   {
-    servocontrol[1] = 0;
+
+    motorcontrol[3] = 0;
 
     //Determine Servo Speed
-    servocontrol[0] = map(joyposHorz, 564, 0, 90, 0);
+    motorcontrol[2] = map(joyposHorz, 564, 0, 90, 0);
 
-    myServo.write(servocontrol[0]);
+    // myServo.write(motorcontrol[2]);
 
-    // Serial.print("Joystick values: ");
-    // Serial.print(joyposHorz);
-    // Serial.print(" Converted values: ");
-    // Serial.println(servocontrol[0]);
   }
     else
   {
     // This is Stopped
-    servocontrol[0] = 90;
-    servocontrol[1] = 90; 
+    motorcontrol[2] = 90;
+    motorcontrol[3] = 0; 
  
   }
 
   Serial.print(" Servo Motor: ");
-  Serial.println(servocontrol[0]);
+  Serial.println(motorcontrol[2]);
 
 }
