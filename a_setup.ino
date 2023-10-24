@@ -10,8 +10,9 @@ void setup()
   // Set initial motor direction as forward
   motorcontrol[1] = 0;
 
-  // Set initial Servo to neutral 
-  servocontrol[1] = 90;
+  // Set initial servo direction as left
+  motorcontrol[3] = 0;
+
  
 }
  
