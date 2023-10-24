@@ -41,7 +41,7 @@ void servoControl() {
   {
     // This is Stopped
     servocontrol[0] = 90;
-    servocontrol[1] = 0; 
+    servocontrol[1] = 90; 
  
   }
 
