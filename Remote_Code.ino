@@ -26,8 +26,8 @@ RH_NRF24 RadioDriver;
 RHReliableDatagram RadioManager(RadioDriver, CLIENT_ADDRESS);
  
 // Declare unsigned 8-bit motorcontrol array
-// 2 Bytes for motor speeds plus 1 byte for direction control
-uint8_t motorcontrol[4]; 
+// 1 Bytes for motor speeds plus 1 byte for direction control, 1 byte for servo angle
+uint8_t motorcontrol[3]; 
  
 // Define the Message Buffer
 uint8_t buf[RH_NRF24_MAX_MESSAGE_LEN];
