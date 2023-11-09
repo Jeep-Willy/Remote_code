@@ -1,4 +1,4 @@
-// Transmition of  joystick data to car
+// Transmition of joystick data to car
 
 void transmitData() {
 
@@ -6,7 +6,7 @@ void transmitData() {
   if (RadioManager.sendtoWait(motorcontrol, sizeof(motorcontrol), SERVER_ADDRESS))
   {
 
-    Serial.println("RadioManager ACK RCVD");
+    Serial.print("RadioManager ACK RCVD");
     
     // Now wait for a reply from the server
     uint8_t len = sizeof(buf);

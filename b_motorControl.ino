@@ -3,7 +3,7 @@
 void motorControl() {
 
   // Print to Serial Monitor
-  Serial.println("control values ");
+  Serial.print("control values ");
   
   // Read the Joystick Y position
   joyposVert = analogRead(joyVert); 
@@ -48,5 +48,7 @@ void motorControl() {
   //Display the Motor Control values in the serial monitor.
   Serial.print("Rear Motor: ");
   Serial.print(motorcontrol[0]);
+  Serial.print(" Direction: ");
+  Serial.print(motorcontrol[1]);
 
 }
